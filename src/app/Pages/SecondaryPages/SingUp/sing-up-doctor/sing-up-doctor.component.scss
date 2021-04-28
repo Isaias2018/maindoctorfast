@@ -1,0 +1,39 @@
+.confirmation {
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+}
+.no-confirmation {
+    display: none;
+}
+
+.singup-form-container {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+}
+
+.singup-form {
+    width: 400px;
+}
+.login-btn {
+  padding: 13px 20px 12px;
+  background-color: #000;
+  border-radius: 4px;
+  font-size: 17px;
+  font-weight: bold;
+  line-height: 20px;
+  color: #fff;
+  margin-bottom: 24px;
+
+  &:hover {
+      border: 1px solid #000;
+      background-color: transparent;
+      color: #000;
+  }
+}

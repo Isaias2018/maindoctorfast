@@ -1,0 +1,12 @@
+*, *::after, *::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+$color-main: #f4f7fa;
+
+body {
+    min-height: 100vh;
+    background: $color-main;
+}

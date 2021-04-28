@@ -1,0 +1,36 @@
+.table-docto {
+    display: flex;
+    flex-direction: column;
+
+    @media screen and (min-width: 1000px) {
+        flex-direction: row;
+        & div {
+            margin-left: 8px;
+        }
+    }
+}   
+
+.table-doctor-main {
+    font-size: 11px;
+
+    @media screen and (min-width: 550px) {
+        font-size: 12px; 
+    }
+}
+
+.btn {
+    font-size: 11px;
+
+    @media screen and (min-width: 550px) {
+        font-size: 12px;
+        
+    }
+}
+
+.delete-with-responsive {
+    display: none;
+    @media screen and (min-width: 650px) {
+        display: table-cell;
+
+    }
+}
