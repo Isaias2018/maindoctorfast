@@ -15,6 +15,9 @@ import { MedicalHistoryComponent } from './Components/Patient/medical-history/me
 import { ListAvailableCitasPatientComponent } from './Components/Patient/list-available-citas-patient/list-available-citas-patient.component';
 import { ListPendientesCanceladosCitasPatientComponent } from './Components/Patient/list-pendientes-canceladas-citas-patient/list-pendientes-cancelado-citas-patient.component';
 import { ListRealizadaCitasPatientComponent } from './Components/Patient/list-realizadas-citas-patient/list-realizadas-citas-patient.component';
+import { MainDoctorComponent } from './Components/Doctor/main-doctor/main-doctor.component';
+import { ListAvailableCitasDoctorComponent } from './Components/Doctor/list-available-citas-doctor/list-available-citas-doctor.component';
+import { ListPendientesCitasDoctorComponent } from './Components/Doctor/list-pendientes-citas-doctor/list-pendientes-citas-doctor.component';
 
 const routes: Routes = [
   {
@@ -45,7 +48,26 @@ const routes: Routes = [
     children: [
       {
         path: 'doctor',
-        component: DoctorComponent
+        component: DoctorComponent,
+        children: [
+          {
+            path: 'main-doctor',
+            redirectTo: ''
+          },
+          {
+            path: '',
+            component: MainDoctorComponent
+          },
+          {
+            path: 'list-available-citas-doctor',
+            component: ListAvailableCitasDoctorComponent
+          },
+          {
+            path: 'list-pendientes-citas-doctor',
+            component: ListPendientesCitasDoctorComponent
+          }
+
+        ]
       },
       {
         path: 'patient',

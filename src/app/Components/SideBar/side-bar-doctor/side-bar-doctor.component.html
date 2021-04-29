@@ -6,8 +6,8 @@
                     <path fill-rule="evenodd" d="M0 0h1v15h15v1H0V0zm10 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-1 0V4.9l-3.613 4.417a.5.5 0 0 1-.74.037L7.06 6.767l-3.656 5.027a.5.5 0 0 1-.808-.588l4-5.5a.5.5 0 0 1 .758-.06l2.609 2.61L13.445 4H10.5a.5.5 0 0 1-.5-.5z"/>
                 </svg>
             </div>
-            <h3 class="sidebar-logo-title"  routerLink="">Doctor Fast</h3>
-    
+            <h3 class="sidebar-logo-title"  routerLink="main-docto">Doctor Fast</h3>
+
         </div>
         <ul class="lisst-unstyled components">
             <li>
@@ -28,10 +28,10 @@
                 </a>
                 <ul class="collapse lisst-unstyled" id="citasMedicas">
                     <li class="container-activo">
-                        <a routerLinkActive="activo">Aprobadas</a>
+                        <a routerLink="list-available-citas-doctor" routerLinkActive="activo">Aprobadas</a>
                     </li>
                     <li class="container-activo">
-                        <a routerLinkActive="activo">Solicitadas</a>
+                        <a routerLink="list-pendientes-citas-doctor" routerLinkActive="activo">Solicitadas</a>
                     </li>
                 </ul>
             </li>
@@ -66,7 +66,7 @@
                         <span>Dashboard</span>
                     </div>
                 </a>
-            </li>-->  
+            </li>-->
             <!--<li>
                 <a href="#Solicitudes" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
                     <div  class="dropdown-toggle-container">
@@ -81,7 +81,7 @@
                         <a routerLink="doctor/list" routerLinkActive="activo">Lista de Doctores</a>
                     </li>
                 </ul>
-            </li>-->        
+            </li>-->
         </ul>
     </div>
 </nav>
