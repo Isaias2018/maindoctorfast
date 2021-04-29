@@ -21,7 +21,7 @@ export class CitaService {
   private urlPendientesCanceladasDoctor: string = 'por_confirmar';
   private urlPendientesCanceladasPaciente: string = 'por_confirmar';
 
-  private urlHistorialPaciente: string = '/historial/**';
+  private urlHistorialPaciente: string = 'historial';
 
 
   private citaSelect: Cita = new Cita();
@@ -68,6 +68,10 @@ export class CitaService {
     return this.httpClient.get<Cita[]>(`${this.apiService.getUrl()}/${this.urlPacienteCitas}/${this.urlPendientesCanceladasPaciente}/${this.authService.getToken().usuario_id}`, {headers: this.authService.getHttpHeaders()});
   }
 
+  public findCitasHistorialPaciente(): Observable<Cita[]>
+  {
+    return this.httpClient.get<Cita[]>(`${this.apiService.getUrl()}/${this.urlPacienteCitas}/${this.urlHistorialPaciente}/${this.authService.getToken().usuario_id}`, {headers: this.authService.getHttpHeaders()});
+  }
 
 
 

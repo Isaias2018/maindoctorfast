@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { MedicalHistory } from 'src/app/Model/MedicalHistory';
 import { Patient } from 'src/app/Model/Patient';
 import { PatientService } from 'src/app/Services/Patient/patient.service';
 
@@ -11,6 +12,7 @@ import { PatientService } from 'src/app/Services/Patient/patient.service';
 export class PatientDetailHistoryComponent implements OnInit {
 
   patient: Patient = new Patient;
+  medicalHistory : MedicalHistory = new MedicalHistory;
 
   constructor(private patientService: PatientService, private routes: Router) { }
 

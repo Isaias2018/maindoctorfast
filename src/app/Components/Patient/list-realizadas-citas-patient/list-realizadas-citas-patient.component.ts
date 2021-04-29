@@ -44,7 +44,7 @@ export class ListRealizadaCitasPatientComponent implements OnInit {
   public findCitasAvailable()
   {
 
-      this.citaService.findCitasAvailablePaciente().subscribe(
+      this.citaService.findCitasHistorialPaciente().subscribe(
       (data) => {
         this.listCitas = data;
         this.citaService.setListCitasAvailable(data);

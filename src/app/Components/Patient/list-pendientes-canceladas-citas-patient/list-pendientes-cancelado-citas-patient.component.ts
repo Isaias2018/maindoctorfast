@@ -33,7 +33,7 @@ export class ListPendientesCanceladosCitasPatientComponent implements OnInit {
   findCitasAvailable()
   {
 
-      this.citaService.findCitasAvailablePaciente().subscribe(
+      this.citaService.findCitasPendientePaciente().subscribe(
       (data) => {
         this.listCitas = data;
         this.citaService.setListCitasAvailable(data);
