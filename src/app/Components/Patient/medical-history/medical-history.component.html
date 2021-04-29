@@ -12,7 +12,7 @@
           </tr>
         </thead>
         <tbody>
-            <tr *ngFor="let medicalHistory of listMedicalHistory">
+            <tr *ngFor="let medicalHistory of listCitasMedicas">
                 <td><p>{{medicalHistory.codigoCita}}</p></td>
                 <td><p>{{medicalHistory.fechaCita | date: 'longDate'}}</p></td>
                 <td><p>{{medicalHistory.areaSintoma.nombre}}</p></td>

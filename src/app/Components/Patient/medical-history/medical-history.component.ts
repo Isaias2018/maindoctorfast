@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Cita } from 'src/app/Model/Cita';
 import { MedicalHistory } from 'src/app/Model/MedicalHistory';
 import { MedicalHistoryService } from 'src/app/Services/MedicalHistory/medical-history.service';
 
@@ -9,7 +10,7 @@ import { MedicalHistoryService } from 'src/app/Services/MedicalHistory/medical-h
 })
 export class MedicalHistoryComponent implements OnInit {
 
-  public listMedicalHistory: Array<MedicalHistory> = new Array();
+  public listCitasMedicas: Array<Cita> = new Array();
 
   constructor(private medicalHistoryService: MedicalHistoryService) { }
 
@@ -21,7 +22,7 @@ export class MedicalHistoryComponent implements OnInit {
   {
     this.medicalHistoryService.findMedicalHistory().subscribe(
       (data) => {
-        this.listMedicalHistory = data;
+        this.listCitasMedicas = data;
       },
       (error) => {
         console.log('error al cargar el historial medico')

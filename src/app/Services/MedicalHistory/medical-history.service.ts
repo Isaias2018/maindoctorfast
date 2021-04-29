@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { Cita } from 'src/app/Model/Cita';
 import { MedicalHistory } from 'src/app/Model/MedicalHistory';
 import { ApiService } from '../Api/api.service';
 import { AuthService } from '../Auth/auth.service';
@@ -14,9 +15,9 @@ export class MedicalHistoryService {
 
   constructor(private apiService: ApiService, private authService: AuthService, private httpClient: HttpClient) { }
 
-  public findMedicalHistory(): Observable<MedicalHistory[]>
+  public findMedicalHistory(): Observable<Cita[]>
   {
-    return this.httpClient.get<MedicalHistory[]>(`${this.apiService.getUrl()}/${this.urlMedicalHistory}/${this.authService.getToken().usuario_id}`, {headers: this.authService.getHttpHeaders()});
+    return this.httpClient.get<Cita[]>(`${this.apiService.getUrl()}/${this.urlMedicalHistory}/${this.authService.getToken().usuario_id}`, {headers: this.authService.getHttpHeaders()});
   }
 
 
