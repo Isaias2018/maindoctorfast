@@ -1,19 +1,19 @@
 $color-main: #f4f7fa;
 $color-text-white: #fff;
 
-.container-doctor {
+.container-patient {
     background: $color-text-white;
     border-radius: 8px;
     padding: 8px;
     &-title {
         padding: 8px 8px 32px 8px;
-    }    
+    }
     @media screen and (min-width: 650px) {
         padding: 24px;
     }
 }
 
-.view-doctor-container {
+.view-patient-container {
     padding: 4px;
     display: grid;
     grid-gap: 16px;
@@ -26,7 +26,7 @@ $color-text-white: #fff;
     }
 }
 
-.view-doctor-data {
+.view-patient-data {
     background: $color-main;
     display: flex;
     padding: 8px;
