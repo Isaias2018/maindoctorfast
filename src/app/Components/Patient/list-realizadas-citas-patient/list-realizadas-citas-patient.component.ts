@@ -24,15 +24,10 @@ export class ListRealizadaCitasPatientComponent implements OnInit {
 
   ngOnInit(): void {
     this.findCitasAvailable();
-    this.listCitas = this.citaService.getListCitasAvailable();
+    this.listCitas = this.citaService.getListCitasHistorial();
 
 
   }
-
-
-
-
-
 
 
   public viewDocto(cita: Cita)
@@ -47,7 +42,7 @@ export class ListRealizadaCitasPatientComponent implements OnInit {
       this.citaService.findCitasHistorialPaciente().subscribe(
       (data) => {
         this.listCitas = data;
-        this.citaService.setListCitasAvailable(data);
+        this.citaService.setListCitasHistorial(data);
       }
     )
   }

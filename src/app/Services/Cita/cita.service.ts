@@ -26,6 +26,7 @@ export class CitaService {
 
   private citaSelect: Cita = new Cita();
   private listCitasAvailable: Array<Cita> = new Array();
+  private listCitasHistorial: Array<Cita> = new Array();
 
   private patient: Patient = new Patient();
 
@@ -54,6 +55,16 @@ export class CitaService {
     return this.listCitasAvailable;
   }
 
+
+  public setListCitasHistorial(listCitasHistorial: Array<Cita>)
+  {
+    this.listCitasHistorial = listCitasHistorial;
+  }
+
+  public getListCitasHistorial(): Array<Cita>
+  {
+    return this.listCitasHistorial;
+  }
 
 
   public findCitasAvailablePaciente(): Observable<Cita[]>

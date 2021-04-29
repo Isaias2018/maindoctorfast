@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { MedicalHistory } from 'src/app/Model/MedicalHistory';
 import { Patient } from 'src/app/Model/Patient';
+import { MedicalHistoryService } from 'src/app/Services/MedicalHistory/medical-history.service';
 import { PatientService } from 'src/app/Services/Patient/patient.service';
 
 @Component({
@@ -11,10 +12,10 @@ import { PatientService } from 'src/app/Services/Patient/patient.service';
 })
 export class PatientDetailHistoryComponent implements OnInit {
 
-  patient: Patient = new Patient;
+
   medicalHistory : MedicalHistory = new MedicalHistory;
 
-  constructor(private patientService: PatientService, private routes: Router) { }
+  constructor(private medicalHistoryService: MedicalHistoryService, private routes: Router) { }
 
   ngOnInit() {
     this.Editar();
@@ -22,10 +23,10 @@ export class PatientDetailHistoryComponent implements OnInit {
 
   Editar(){
 
-    this.patientService.getPatientId()
+    /*this.medicalHistoryService.findMedicalHistory()
     .subscribe(data=>{
-      this.patient=data;
-    })
+      this.medicalHistory=data;
+    })*/
 
   }
 }
