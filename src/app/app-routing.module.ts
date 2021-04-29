@@ -19,6 +19,7 @@ import { MainDoctorComponent } from './Components/Doctor/main-doctor/main-doctor
 import { ListAvailableCitasDoctorComponent } from './Components/Doctor/list-available-citas-doctor/list-available-citas-doctor.component';
 import { ListPendientesCitasDoctorComponent } from './Components/Doctor/list-pendientes-citas-doctor/list-pendientes-citas-doctor.component';
 import { DoctorPerfilPropioComponent } from './Components/Doctor/doctor-perfil-propio/doctor-perfil-propio.component';
+import { PatientPerfilPropioComponent } from './Components/Patient/patient-perfil-propio/patient-perfil-propio.component';
 
 const routes: Routes = [
   {
@@ -113,6 +114,10 @@ const routes: Routes = [
           {
             path: 'medical-history',
             component: MedicalHistoryComponent
+          },
+          {
+            path: 'patient-perfil-propio',
+            component: PatientPerfilPropioComponent
           }
         ]
       }

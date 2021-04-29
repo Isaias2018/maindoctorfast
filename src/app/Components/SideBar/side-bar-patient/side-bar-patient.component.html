@@ -50,17 +50,20 @@
         </a>
       </li>
       <li>
-        <a href="#logout" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
-          <div class="dropdown-toggle-container">
-            <span>Logout</span>
-          </div>
+        <a href="#acount" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+            <div  class="dropdown-toggle-container">
+                <span>Acount</span>
+            </div>
         </a>
-        <ul class="collapse lisst-unstyled" id="logout">
-          <li class="container-activo">
-            <a (click)="logout()" routerLinkActive="activo">Logout</a>
-          </li>
+        <ul class="collapse lisst-unstyled" id="acount">
+            <li class="container-activo">
+                <a  routerLink="patient-perfil-propio" routerLinkActive="activo">Perfil</a>
+            </li>
+            <li class="container-activo">
+                <a (click)="logout()" routerLinkActive="activo">Logout</a>
+            </li>
         </ul>
-      </li>
+    </li>
       <!--<li>
                 <a routerLink="dashboard" routerLinkActive="activo">
                     <div  class="dropdown-toggle-container">
