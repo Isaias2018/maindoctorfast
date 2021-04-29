@@ -20,7 +20,7 @@ export class ListPendientesCanceladosCitasPatientComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.findCitasAvailable();
+    this.findCitasPendientesCanceladas();
     this.listCitas = this.citaService.getListCitasPendiente();
   }
 
@@ -30,7 +30,7 @@ export class ListPendientesCanceladosCitasPatientComponent implements OnInit {
     this.router.navigateByUrl('main/patient/view-doctor');
   }
 
-  findCitasAvailable()
+  findCitasPendientesCanceladas()
   {
 
       this.citaService.findCitasPendientePaciente().subscribe(
