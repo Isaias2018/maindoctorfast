@@ -12,7 +12,7 @@ export class DoctorService {
 
   private urlRegisterDoctor: string = 'usuario/registroDoctor';
   private urlDoctorsAvailable: string = 'paciente/doctor/disponibles'
-  private urlPerfilDoctor: string = 'paciente/perfil'
+  private urlPerfilDoctor: string = 'doctor/perfil'
 
 
   private doctorSelect: Doctor = new Doctor();

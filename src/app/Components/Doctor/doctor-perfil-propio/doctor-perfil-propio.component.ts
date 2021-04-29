@@ -10,11 +10,20 @@ import { DoctorService } from 'src/app/Services/Doctor/doctor.service';
 })
 export class DoctorPerfilPropioComponent implements OnInit {
 
-  doctor: Doctor = this.doctorService.getDoctorSelect();
+  doctor: Doctor = new Doctor;
 
   constructor(private doctorService: DoctorService, private routes: Router) { }
 
-  ngOnInit(): void {
+  ngOnInit() {
+    this.Editar();
+  }
+
+  Editar(){
+
+    this.doctorService.getDoctorId()
+    .subscribe(data=>{
+      this.doctor=data;
+    })
 
   }
 }
