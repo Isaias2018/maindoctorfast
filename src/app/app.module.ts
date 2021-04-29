@@ -29,6 +29,9 @@ import { from } from 'rxjs';
 import { ListAvailableCitasPatientComponent } from './Components/Patient/list-available-citas-patient/list-available-citas-patient.component';
 import { ListPendientesCanceladosCitasPatientComponent } from './Components/Patient/list-pendientes-canceladas-citas-patient/list-pendientes-cancelado-citas-patient.component';
 import { ListRealizadaCitasPatientComponent } from './Components/Patient/list-realizadas-citas-patient/list-realizadas-citas-patient.component';
+import { MainDoctorComponent } from './Components/Doctor/main-doctor/main-doctor.component';
+import { ListAvailableCitasDoctorComponent } from './Components/Doctor/list-available-citas-doctor/list-available-citas-doctor.component';
+import { ListPendientesCitasDoctorComponent } from './Components/Doctor/list-pendientes-citas-doctor/list-pendientes-citas-doctor.component';
 
 @NgModule({
   declarations: [
@@ -43,6 +46,9 @@ import { ListRealizadaCitasPatientComponent } from './Components/Patient/list-re
     MenuSingUpComponent,
     AlertSingUpComponent,
     MainPatientComponent,
+    MainDoctorComponent,
+    ListAvailableCitasDoctorComponent,
+    ListPendientesCitasDoctorComponent,
     MedicalAppointmentComponent,
     ListAvailableDoctorsComponent,
     ListAvailableCitasPatientComponent,

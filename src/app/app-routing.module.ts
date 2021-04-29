@@ -18,6 +18,7 @@ import { ListRealizadaCitasPatientComponent } from './Components/Patient/list-re
 import { MainDoctorComponent } from './Components/Doctor/main-doctor/main-doctor.component';
 import { ListAvailableCitasDoctorComponent } from './Components/Doctor/list-available-citas-doctor/list-available-citas-doctor.component';
 import { ListPendientesCitasDoctorComponent } from './Components/Doctor/list-pendientes-citas-doctor/list-pendientes-citas-doctor.component';
+import { DoctorPerfilPropioComponent } from './Components/Doctor/doctor-perfil-propio/doctor-perfil-propio.component';
 
 const routes: Routes = [
   {
@@ -65,6 +66,10 @@ const routes: Routes = [
           {
             path: 'list-pendientes-citas-doctor',
             component: ListPendientesCitasDoctorComponent
+          },
+          {
+            path: 'doctor-perfil-propio',
+            component: DoctorPerfilPropioComponent
           }
 
         ]

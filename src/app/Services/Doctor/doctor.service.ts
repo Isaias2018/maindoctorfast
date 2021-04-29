@@ -12,11 +12,12 @@ export class DoctorService {
 
   private urlRegisterDoctor: string = 'usuario/registroDoctor';
   private urlDoctorsAvailable: string = 'paciente/doctor/disponibles'
+  private urlPerfilDoctor: string = 'paciente/perfil'
 
 
   private doctorSelect: Doctor = new Doctor();
   private listDoctorsAvailable: Array<Doctor> = new Array();
-  
+
   constructor(private authService: AuthService, private apiService: ApiService, private httpClient: HttpClient) {
 
   }
@@ -50,4 +51,16 @@ export class DoctorService {
   {
     return this.httpClient.get<Doctor[]>(`${this.apiService.getUrl()}/${this.urlDoctorsAvailable}`,{headers: this.authService.getHttpHeaders()});
   }
+
+  public getDoctorId(){
+    return this.httpClient.get<Doctor>(`${this.apiService.getUrl()}/${this.urlPerfilDoctor}/${this.authService.getToken().usuario_id}`, {headers: this.authService.getHttpHeaders()});
+  }
+
+
+
+
+
+
+
+
 }
