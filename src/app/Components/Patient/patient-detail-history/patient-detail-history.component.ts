@@ -12,7 +12,7 @@ import { PatientService } from 'src/app/Services/Patient/patient.service';
 })
 export class PatientDetailHistoryComponent implements OnInit {
 
-
+  patient : Patient = new Patient;
   medicalHistory : MedicalHistory = new MedicalHistory;
 
   constructor(private medicalHistoryService: MedicalHistoryService, private routes: Router) { }

@@ -21,7 +21,7 @@ export class ListPendientesCanceladosCitasPatientComponent implements OnInit {
 
   ngOnInit(): void {
     this.findCitasAvailable();
-    this.listCitas = this.citaService.getListCitasAvailable();
+    this.listCitas = this.citaService.getListCitasPendiente();
   }
 
   public viewDocto(cita: Cita)
@@ -36,7 +36,7 @@ export class ListPendientesCanceladosCitasPatientComponent implements OnInit {
       this.citaService.findCitasPendientePaciente().subscribe(
       (data) => {
         this.listCitas = data;
-        this.citaService.setListCitasAvailable(data);
+        this.citaService.setListCitasPendiente(data);
       }
     )
   }
