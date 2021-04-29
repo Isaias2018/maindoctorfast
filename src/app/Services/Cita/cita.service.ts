@@ -22,7 +22,7 @@ export class CitaService {
   private urlPendientesCanceladasPaciente: string = 'por_confirmar';
 
   private urlHistorialPaciente: string = 'historial';
-
+  private urlMedicalHistory: string = 'paciente/citas/historial_medico';
 
   private citaSelect: Cita = new Cita();
   private listCitasAvailable: Array<Cita> = new Array();
@@ -112,4 +112,15 @@ export class CitaService {
     return this.httpClient.get<Cita[]>(`${this.apiService.getUrl()}/${this.urlDoctorCitas}/${this.urlPendientesCanceladasDoctor}/${this.authService.getToken().usuario_id}`, {headers: this.authService.getHttpHeaders()});
   }
 
+
+
+
+
+
+
+
+  public findCitaMedicalHistory(): Observable<Cita[]>
+  {
+    return this.httpClient.get<Cita[]>(`${this.apiService.getUrl()}/${this.urlMedicalHistory}/${this.authService.getToken().usuario_id}`, {headers: this.authService.getHttpHeaders()});
+  }
 }

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Cita } from 'src/app/Model/Cita';
 import { MedicalHistory } from 'src/app/Model/MedicalHistory';
+import { CitaService } from 'src/app/Services/Cita/cita.service';
 import { MedicalHistoryService } from 'src/app/Services/MedicalHistory/medical-history.service';
 
 @Component({
@@ -12,7 +13,7 @@ export class MedicalHistoryComponent implements OnInit {
 
   public listCitasMedicas: Array<Cita> = new Array();
 
-  constructor(private medicalHistoryService: MedicalHistoryService) { }
+  constructor(private citaService: CitaService) { }
 
   ngOnInit(): void {
     this.findMedicalHistory();
@@ -20,7 +21,7 @@ export class MedicalHistoryComponent implements OnInit {
 
   public findMedicalHistory()
   {
-    this.medicalHistoryService.findMedicalHistory().subscribe(
+    this.citaService.findCitaMedicalHistory().subscribe(
       (data) => {
         this.listCitasMedicas = data;
       },
