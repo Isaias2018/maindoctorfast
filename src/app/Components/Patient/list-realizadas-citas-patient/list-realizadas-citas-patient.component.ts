@@ -23,7 +23,7 @@ export class ListRealizadaCitasPatientComponent implements OnInit {
 
 
   ngOnInit(): void {
-    this.findCitasAvailable();
+    this.findCitasHistorialPaciente();
     this.listCitas = this.citaService.getListCitasHistorial();
 
 
@@ -36,7 +36,7 @@ export class ListRealizadaCitasPatientComponent implements OnInit {
     this.router.navigateByUrl('main/patient/view-doctor');
   }
 
-  public findCitasAvailable()
+  public findCitasHistorialPaciente()
   {
 
       this.citaService.findCitasHistorialPaciente().subscribe(
