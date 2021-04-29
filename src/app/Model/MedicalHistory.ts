@@ -1,3 +1,4 @@
+import { Diagnostic } from "./Diagnostic";
 import { Doctor } from "./Doctor";
 import { MedicalPrescription } from "./MedicalPrescription";
 import { Patient } from "./Patient";
@@ -15,6 +16,7 @@ export class MedicalHistory {
     public doctor: Doctor;
     public paciente: Patient;
     public prescripcionMedica: MedicalPrescription;
+    public diagnostic:Diagnostic;
 
     public constructor() {
         this.idCita = 0;
@@ -28,5 +30,6 @@ export class MedicalHistory {
         this.doctor = new Doctor();
         this.paciente = new Patient();
         this.prescripcionMedica = new MedicalPrescription();
+        this.diagnostic = new Diagnostic();
     }
 }
