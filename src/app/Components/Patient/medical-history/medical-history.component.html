@@ -12,10 +12,10 @@
           </tr>
         </thead>
         <tbody>
-            <tr *ngFor="let medicalHistory of listCitasMedicas">
-                <td><p>{{medicalHistory.codigoCita}}</p></td>
-                <td><p>{{medicalHistory.fechaCita | date: 'longDate'}}</p></td>
-                <td><p>{{medicalHistory.areaSintoma.nombre}}</p></td>
+            <tr *ngFor="let cita of listCitasMedicas">
+                <td><p>{{cita.codigoCita}}</p></td>
+                <td><p>{{cita.fechaCita | date: 'longDate'}}</p></td>
+                <td><p>{{cita.areaSintoma.nombre}}</p></td>
                 <td>
                   <a  class="btn btn-info">
                     <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="white" class="bi bi-eye-fill"
