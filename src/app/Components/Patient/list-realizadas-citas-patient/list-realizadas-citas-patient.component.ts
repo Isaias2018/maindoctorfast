@@ -15,6 +15,8 @@ export class ListRealizadaCitasPatientComponent implements OnInit {
   closeResult = '';
   public listCitas: Array<Cita> = new Array();
 
+
+
   constructor(private modalService: NgbModal,
     private citaService: CitaService, private router: Router) {}
 
@@ -23,7 +25,13 @@ export class ListRealizadaCitasPatientComponent implements OnInit {
   ngOnInit(): void {
     this.findCitasAvailable();
     this.listCitas = this.citaService.getListCitasAvailable();
+
+
   }
+
+
+
+
 
 
 
@@ -61,5 +69,9 @@ export class ListRealizadaCitasPatientComponent implements OnInit {
       return `with: ${reason}`;
     }
   }
+
+
+
+
 
 }
