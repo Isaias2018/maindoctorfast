@@ -12,7 +12,7 @@ import { AuthService } from '../Auth/auth.service';
 export class PatientService {
 
   private urlRegisterPatient: string = 'usuario/registroPaciente';
-  private urlPerfilPatient: string = 'patient/perfil'
+  private urlPerfilPatient: string = 'paciente/perfil'
 
   constructor(private authService: AuthService,private apiService: ApiService, private httpClient: HttpClient) { }
 
