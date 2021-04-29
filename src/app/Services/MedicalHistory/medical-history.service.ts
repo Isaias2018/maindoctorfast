@@ -18,4 +18,7 @@ export class MedicalHistoryService {
   {
     return this.httpClient.get<MedicalHistory[]>(`${this.apiService.getUrl()}/${this.urlMedicalHistory}/${this.authService.getToken().usuario_id}`, {headers: this.authService.getHttpHeaders()});
   }
+
+
+
 }
