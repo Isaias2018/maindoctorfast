@@ -1,9 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Cita } from 'src/app/Model/Cita';
-import { User } from 'src/app/Model/User';
 import { CitaService } from 'src/app/Services/Cita/cita.service';
-
+import {NgbModal, ModalDismissReasons} from '@ng-bootstrap/ng-bootstrap';
 
 
 @Component({
@@ -13,16 +12,20 @@ import { CitaService } from 'src/app/Services/Cita/cita.service';
 })
 export class ListRealizadaCitasPatientComponent implements OnInit {
 
-
+  closeResult = '';
   public listCitas: Array<Cita> = new Array();
-  constructor(private citaService: CitaService, private router: Router) {
 
-  }
+  constructor(private modalService: NgbModal,
+    private citaService: CitaService, private router: Router) {}
+
+
 
   ngOnInit(): void {
     this.findCitasAvailable();
     this.listCitas = this.citaService.getListCitasAvailable();
   }
+
+
 
   public viewDocto(cita: Cita)
   {
@@ -39,6 +42,24 @@ export class ListRealizadaCitasPatientComponent implements OnInit {
         this.citaService.setListCitasAvailable(data);
       }
     )
+  }
+
+  open(content: any) {
+    this.modalService.open(content, {ariaLabelledBy: 'modal-basic-title'}).result.then((result) => {
+      this.closeResult = `Closed with: ${result}`;
+    }, (reason) => {
+      this.closeResult = `Dismissed ${this.getDismissReason(reason)}`;
+    });
+  }
+
+  private getDismissReason(reason: any): string {
+    if (reason === ModalDismissReasons.ESC) {
+      return 'by pressing ESC';
+    } else if (reason === ModalDismissReasons.BACKDROP_CLICK) {
+      return 'by clicking on a backdrop';
+    } else {
+      return `with: ${reason}`;
+    }
   }
 
 }

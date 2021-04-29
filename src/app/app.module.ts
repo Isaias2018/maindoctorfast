@@ -4,7 +4,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { GoogleMapsModule } from '@angular/google-maps';
 import { AgmCoreModule } from '@agm/core';
-
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './Pages/MainPages/login/login.component';
@@ -67,6 +67,7 @@ import { DoctorPerfilPropioComponent } from './Components/Doctor/doctor-perfil-p
   ],
   imports: [
     BrowserModule,
+    NgbModule,
     AppRoutingModule,
     ReactiveFormsModule,
     HttpClientModule,
