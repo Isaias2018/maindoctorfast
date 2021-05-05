@@ -113,7 +113,7 @@ const routes: Routes = [
             component: ViewDoctorComponent
           },
           {
-            path: 'view-medicalHistory',
+            path: 'medical-history-detail',
             component: MedicalHistoryDetailComponent
           },
           {
