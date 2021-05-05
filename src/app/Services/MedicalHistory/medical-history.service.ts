@@ -12,7 +12,26 @@ export class MedicalHistoryService {
 
   private urlMedicalHistory: string = 'paciente/citas/historial_medico';
 
+
+
+  private medicalHistorySelect: MedicalHistory = new MedicalHistory();
+
   constructor(private apiService: ApiService, private authService: AuthService, private httpClient: HttpClient) { }
+
+
+
+  public setMedicalHistorySelect(medicalHistory: MedicalHistory)
+  {
+    this.medicalHistorySelect = medicalHistory;
+  }
+
+  public getMedicalHistorySelect(): MedicalHistory
+  {
+    return this.medicalHistorySelect;
+  }
+
+
+
 
   public findMedicalHistory(): Observable<MedicalHistory[]>
   {

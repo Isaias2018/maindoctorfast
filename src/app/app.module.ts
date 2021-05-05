@@ -35,6 +35,7 @@ import { ListPendientesCitasDoctorComponent } from './Components/Doctor/list-pen
 import { PatientPerfilPropioComponent } from './Components/Patient/patient-perfil-propio/patient-perfil-propio.component';
 import { DoctorPerfilPropioComponent } from './Components/Doctor/doctor-perfil-propio/doctor-perfil-propio.component';
 import { PatientDetailHistoryComponent } from './Components/Patient/patient-detail-history/patient-detail-history.component';
+import { MedicalHistoryDetailComponent } from './Components/Patient/medical-history-detail/medical-history-detail.component';
 
 @NgModule({
   declarations: [
@@ -65,7 +66,8 @@ import { PatientDetailHistoryComponent } from './Components/Patient/patient-deta
     ViewDoctorComponent,
     SideBarDoctorComponent,
     MedicalHistoryComponent,
-    PatientDetailHistoryComponent
+    PatientDetailHistoryComponent,
+    MedicalHistoryDetailComponent
   ],
   imports: [
     BrowserModule,

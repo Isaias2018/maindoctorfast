@@ -18,7 +18,7 @@ export class ListAvailableDoctorsComponent implements OnInit {
   public appointment: Appointment = new Appointment();
   public listTime: Array<any> = new Array();
 
-  constructor(private appintmentService: AppointmentService, private doctorService: DoctorService, private authService: AuthService, private router: Router) { 
+  constructor(private appintmentService: AppointmentService, private doctorService: DoctorService, private authService: AuthService, private router: Router) {
     this.findDoctorsAvailable();
     this.listDoctors = this.doctorService.getListDoctorsAvailable();
     this.listTime = this.listHours();
@@ -31,7 +31,7 @@ export class ListAvailableDoctorsComponent implements OnInit {
   public saveAppointment(doctor: Doctor)
   {
    this.appointment = this.appintmentService.getSymptom();
-   this.appointment.paciente_usuario_id = this.authService.getToken().usuario_id; 
+   this.appointment.paciente_usuario_id = this.authService.getToken().usuario_id;
    this.appointment.doctor_id = doctor.idDoctor;
    this.appointment.areaSintoma_id = Number(this.appointment.areaSintoma_id);
    this.appintmentService.createAppointment(this.appointment).subscribe(
@@ -68,7 +68,7 @@ export class ListAvailableDoctorsComponent implements OnInit {
 
   public randomSecond(): number
   {
-    return Math.floor(Math.random() * 60) + 1;
+    return Math.floor(Math.random() * 40) + 1;
   }
 
   private findDoctorsAvailable()

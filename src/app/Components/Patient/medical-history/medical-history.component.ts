@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Diagnostic } from 'src/app/Model/Diagnostic';
 import { MedicalHistory } from 'src/app/Model/MedicalHistory';
 import { MedicalHistoryService } from 'src/app/Services/MedicalHistory/medical-history.service';
@@ -13,11 +14,24 @@ export class MedicalHistoryComponent implements OnInit {
   public listMedicalHistory: Array<MedicalHistory> = new Array();
   public listDiagnosticos: Array<Diagnostic> = new Array();
 
-  constructor(private medicalHistoryService: MedicalHistoryService) { }
+  constructor(private medicalHistoryService: MedicalHistoryService, private router: Router) { }
 
   ngOnInit(): void {
     this.findMedicalHistory();
   }
+
+
+
+
+
+  public viewMedicalHistory(medicalHistory: MedicalHistory)
+  {
+    this.medicalHistoryService.setMedicalHistorySelect(medicalHistory);
+    this.router.navigateByUrl('main/patient/medical-history-detail');
+  }
+
+
+
 
   public findMedicalHistory()
   {
