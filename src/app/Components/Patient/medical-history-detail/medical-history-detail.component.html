@@ -1,9 +1,11 @@
 <div class="view-patient-container">
     <div class="container-patient">
-        <h2 class="container-patient-title">Datos del historial medico</h2>
+        <h2 class="container-patient-title">Cita Médica<span>{{medicalHistory.cita.codigoCita}}</span></h2>
         <div>
             <div class="view-patient-data">
-                <p>Nombre: <span>{{medicalHistory.cita.codigoCita}}</span></p>
+                <p>Fecha: <span>{{medicalHistory.cita.codigoCita}}</span></p>
+                <p>Doctor: <span>{{medicalHistory.cita.fechaCita}}</span></p>
+                <p>Tarifa: <span>{{medicalHistory.cita.doctor.tarifa}}</span></p>
             </div>
 
         </div>
