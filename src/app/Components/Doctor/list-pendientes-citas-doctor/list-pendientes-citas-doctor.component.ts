@@ -29,13 +29,13 @@ export class ListPendientesCitasDoctorComponent implements OnInit {
     this.router.navigateByUrl('main/patient/view-doctor');
   }
 
-  findCitasAvailable()
+  findCitaspendientesCanceladas()
   {
       let id = localStorage.getItem("usuario_id")
-      this.citaService.findCitasAvailableDoctor().subscribe(
+      this.citaService.findCitasPendienteDoctor().subscribe(
       (data) => {
         this.listCitas = data;
-        this.citaService.setListCitasAvailable(data);
+        this.citaService.setListCitasPendiente(data);
       }
     )
   }

@@ -57,6 +57,9 @@ export class CitaService {
   }
 
 
+
+
+
   public setListCitasHistorial(listCitasHistorial: Array<Cita>)
   {
     this.listCitasHistorial = listCitasHistorial;
