@@ -13,6 +13,7 @@ export class MedicalHistory {
     public paciente: Patient;
     public prescripcionMedica: MedicalPrescription;
     public diagnosticos: Array<Diagnostic>;
+    public doctor_nombre :string;
 
     public constructor() {
 
@@ -21,5 +22,6 @@ export class MedicalHistory {
         this.paciente = new Patient();
         this.prescripcionMedica = new MedicalPrescription();
         this.diagnosticos = new Array();
+        this.doctor_nombre = '';
     }
 }

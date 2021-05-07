@@ -18,7 +18,7 @@ export class CitaService {
   private urlDisponiblesDoctor: string = 'en_curso';
   private urlDisponiblesPaciente: string = 'en_curso';
 
-  private urlPendientesCanceladasDoctor: string = 'por_confirmar';
+  private urlPendientesCanceladasDoctor: string = 'disponibles';
   private urlPendientesCanceladasPaciente: string = 'por_confirmar';
 
   private urlHistorialPaciente: string = 'historial';

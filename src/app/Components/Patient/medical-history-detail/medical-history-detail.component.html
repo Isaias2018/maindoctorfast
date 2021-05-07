@@ -1,11 +1,11 @@
 <div class="view-patient-container">
     <div class="container-patient">
-        <h2 class="container-patient-title">Cita Médica<span>{{medicalHistory.cita.codigoCita}}</span></h2>
+        <h2 class="container-patient-title">Cita Médica <span>{{ medicalHistory.cita.codigoCita}}</span></h2>
         <div>
             <div class="view-patient-data">
-                <p>Fecha: <span>{{medicalHistory.cita.codigoCita}}</span></p>
-                <p>Doctor: <span>{{medicalHistory.cita.fechaCita}}</span></p>
-                <p>Tarifa: <span>{{medicalHistory.cita.doctor.tarifa}}</span></p>
+                <p>Doctor: <span>{{medicalHistory.doctor_nombre}}</span></p>
+                <p>Fecha: <span>{{medicalHistory.cita.fechaCita | date: 'longDate'}}</span></p>
+                <p>Tarifa: <span>{{medicalHistory.areaSintoma.descripcion}}</span></p>
             </div>
 
         </div>
@@ -17,8 +17,15 @@
     <div class="panel panel-default">
       <div class="panel-heading">Panel Heading</div>
       <div class="panel-body">
-        <p>Fecha: <span>{{medicalHistory.cita.codigoCita}}</span></p>
+        <table class="table table-striped table-doctor-main">
+          <thead>
+            <tr>
+              <th scope="col">Nombre</th>
+              <th class="delete-with-responsive" scope="col">Fecha</th>
+            </tr>
+          </thead>
 
+        </table>
       </div>
     </div>
 

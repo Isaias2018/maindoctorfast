@@ -12,7 +12,7 @@ import { MedicalHistoryService } from 'src/app/Services/MedicalHistory/medical-h
 export class MedicalHistoryComponent implements OnInit {
 
   public listMedicalHistory: Array<MedicalHistory> = new Array();
-  public listDiagnosticos: Array<Diagnostic> = new Array();
+
 
   constructor(private medicalHistoryService: MedicalHistoryService, private router: Router) { }
 
