@@ -19,7 +19,7 @@ export class ListPendientesCitasDoctorComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.findCitasAvailable();
+    this.findCitaspendientesCanceladas();
     this.listCitas = this.citaService.getListCitasAvailable();
   }
 
