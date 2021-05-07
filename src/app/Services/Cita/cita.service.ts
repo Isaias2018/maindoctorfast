@@ -82,7 +82,7 @@ export class CitaService {
   }
 
 
-
+/*pacientes */
 
   public findCitasAvailablePaciente(): Observable<Cita[]>
   {
@@ -102,7 +102,7 @@ export class CitaService {
   }
 
 
-
+/*doctor */
 
   public findCitasAvailableDoctor(): Observable<Cita[]>
   {
