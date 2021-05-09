@@ -8,6 +8,7 @@
       <thead>
         <tr>
           <th scope="col">Codigo</th>
+          <th scope="col">Paciente</th>
           <th scope="col">Area del Sintoma</th>
           <th scope="col">Historia</th>
           <th scope="col">Detalle</th>
@@ -18,6 +19,7 @@
           <td>
             {{cita.codigoCita}}
           </td>
+          <td>{{cita.patient.usuario.nombre}}</td>
           <td>{{cita.areaSintoma.nombre}}</td>
           <td>
             <a (click)="viewDocto(cita)" class="btn btn-warning">

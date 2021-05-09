@@ -14,7 +14,16 @@ export class DoctorPerfilComponent implements OnInit {
 
   constructor(private doctorService: DoctorService, private routes: Router) { }
 
-  ngOnInit(): void {
+  ngOnInit() {
+    this.Editar();
+  }
+
+  Editar(){
+
+    this.doctorService.getDoctorId()
+    .subscribe(data=>{
+      this.doctor=data;
+    })
 
   }
 }
